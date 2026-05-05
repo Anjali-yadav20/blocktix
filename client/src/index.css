@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f0f4ff;
+  --bg2: #e8f0fe;
+  --white: #ffffff;
+  --navy: #1a2b6d;
+  --blue: #3b82f6;
+  --lblue: #93c5fd;
+  --sky: #dbeafe;
+  --pink: #f472b6;
+  --lpink: #fce7f3;
+  --orange: #fb923c;
+  --lorange: #fff1e6;
+  --mint: #e0f7f4;
+  --teal: #14b8a6;
+  --muted: #6b7a99;
+  --text: #1a2b6d;
+  --border: #c7d7f9;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+@keyframes drift {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(20px, -20px); }
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+.animate-blink { animation: blink 1.4s infinite; }
+.animate-drift { animation: drift 8s ease-in-out infinite; }
